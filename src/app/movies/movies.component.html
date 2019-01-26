@@ -1,0 +1,13 @@
+<div class="new">
+  <label>
+    New Movie:
+    <input #movieName>
+  </label>
+  <button (click)="addMovie(movieName.value); movieName.value=''">Add</button>
+</div>
+<ul class="movies">
+  <li *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}">
+    <div>{{movie.name}}</div>
+    <button class="delete" title="delete Movie" (click)="deleteMovie(movie)">X</button>
+  </li>
+</ul>

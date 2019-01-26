@@ -1,0 +1,35 @@
+@import '../../vars.scss';
+
+.movies {
+    margin: 20px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    li {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: $bgColor;
+        color: white;
+        transition: .3s;
+
+        &:hover {
+            background-color: darken($bgColor, 15%);
+        }
+
+        &.selected {
+            color: yellow;
+            background-color: darken($bgColor, 20%);
+        }
+    }
+}

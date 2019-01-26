@@ -1,0 +1,8 @@
+<div *ngIf="movie" class="movie-details">
+  <h2>id: {{movie.id}}</h2>
+  <label>name:
+    <input [(ngModel)]="movie.name" placeholder="name">
+  </label>
+  <button (click)="save()">Save</button>
+  <button (click)="goBack()">Go Back</button>
+</div>

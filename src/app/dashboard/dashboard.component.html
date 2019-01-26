@@ -1,0 +1,7 @@
+<h3>Top Movies</h3>
+<div class="top-movies">
+  <a *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}">
+    {{movie.name}}
+  </a>
+</div>
+<app-movie-search></app-movie-search>
